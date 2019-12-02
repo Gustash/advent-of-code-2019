@@ -6,22 +6,26 @@ function main() {
   let output;
   let noun;
   let verb;
+  for (let i = 0; i < 100; i += 1) {
+    for (let j = 0; j < 100; j += 1) {
+      const input = getInitialInput();
+      input[1] = noun;
+      input[2] = verb;
 
-  while (output !== DESIRED_OUTPUT) {
-    noun = Math.round(Math.random() * 99);
-    verb = Math.round(Math.random() * 99);
+      output = intcodeProgram(input);
 
-    console.log('Testing', [noun, verb]);
-    const input = getInitialInput();
-    input[1] = noun;
-    input[2] = verb;
+      if (output === DESIRED_OUTPUT) {
+        console.log('Noun:', noun);
+        console.log('Verb:', verb);
+        console.log('Result:', 100 * noun + verb);
+        return;
+      }
 
-    output = intcodeProgram(input);
+      verb = 0 + j;
+    }
+
+    noun = 0 + i;
   }
-
-  console.log('Noun:', noun);
-  console.log('Verb:', verb);
-  console.log('Result:', 100 * noun + verb);
 }
 
 main();
