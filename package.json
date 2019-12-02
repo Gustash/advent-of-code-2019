@@ -21,5 +21,13 @@
   "bugs": {
     "url": "https://github.com/Gustash/advent-of-code-2019/issues"
   },
-  "homepage": "https://github.com/Gustash/advent-of-code-2019#readme"
+  "homepage": "https://github.com/Gustash/advent-of-code-2019#readme",
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.19.1"
+  }
 }
